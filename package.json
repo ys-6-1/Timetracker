@@ -1,0 +1,36 @@
+{
+  "name": "time-tracker-app",
+  "version": "1.0.0",
+  "description": "A solo MVP project",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit",
+    "start": "node index.js",
+    "hack:server": "nodemon index.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.0",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.0.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.3"
+  },
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.5.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
