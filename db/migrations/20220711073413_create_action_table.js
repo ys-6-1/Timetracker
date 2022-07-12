@@ -3,20 +3,26 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("category", function (table) {
+  return knex.schema.createTable("action", function (table) {
     table.increments("id").primary();
-
-    table.string("title", 32).notNullable().index();
-    table.string("description", 64);
 
     table
       .integer("user_id")
       .unsigned()
-      .notNullable()
       .references("user.id")
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
-    table.boolean("public");
+
+    table
+      .integer("category_id")
+      .unsigned()
+      .references("category.id")
+      .onDelete("CASCADE")
+      .onUpdate("CASCADE");
+
+    table.integer("duration").defaultTo(0);
+
+    table.timestamp("date", { useTz: true });
     table.timestamps(true, true);
   });
 };
@@ -26,5 +32,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  knex.schema.dropTable("category");
+  knex.schema.dropTable("action");
 };

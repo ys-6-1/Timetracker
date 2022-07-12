@@ -3,16 +3,14 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("daily", function (table) {
+  return knex.schema.createTable("category", function (table) {
     table.increments("id").primary();
-
-    table.date("date").notNullable();
-    table.string("interval");
+    table.string("title", 32).notNullable().index();
+    table.string("description", 64);
     table
-      .integer("action_id")
+      .integer("user_id")
       .unsigned()
-      .notNullable()
-      .references("action.id")
+      .references("user.id")
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
     table.timestamps(true, true);
@@ -24,5 +22,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  knex.schema.dropTable(daily);
+  knex.schema.dropTable("category");
 };

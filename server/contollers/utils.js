@@ -18,7 +18,9 @@ module.exports = {
         limit,
       };
     }
-    const tableSize = await knex(CATEGORY_TABLE).count();
+    const tableSize = await knex(CATEGORY_TABLE)
+      .where("category.user_id", "=", req.session.passport.user)
+      .count();
     if (startIndex + limit < Number(tableSize[0].count)) {
       results.next = {
         page: page + 1,

@@ -13,7 +13,7 @@ Time Tracker is a single page timer / time-tracking application. It allows users
 
 To use the application locally, please follow the steps below.
 
-Please visit the deployed app at: [https://timetracker-app-prod.herokuapp.com/](https://timetracker-app-prod.herokuapp.com/)
+Please visit the deployed app at: [https://timetracker-ys.herokuapp.com/](https://timetracker-ys.herokuapp.com/)
 
 ### Run it in the development mode
 

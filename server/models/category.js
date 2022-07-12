@@ -2,29 +2,6 @@ const knex = require("../knex");
 const CATEGORY_TABLE = "category";
 
 module.exports = {
-  // getAll(limit = 5, page = 1, searchQuery, orderByColumn, orderByDirection) {
-  //   return knex
-  //     .select()
-  //     .from(CATEGORY_TABLE)
-  //     .modify(function (queryBuilder) {
-  //       if (searchQuery)
-  //         queryBuilder.where("title", "ilike", `%${searchQuery}%`);
-  //     })
-  //     .orderBy(orderByColumn, orderByDirection)
-  //     .limit(limit)
-  //     .offset((page - 1) * limit);
-  // },
-  // getAll(limit = 10, searchQuery) {
-  //   return knex
-  //     .select()
-  //     .from(CATEGORY_TABLE)
-  //     .modify(function (queryBuilder) {
-  //       if (searchQuery)
-  //         queryBuilder.where("title", "ilike", `%${searchQuery}%`);
-  //     })
-  //     .orderBy("id")
-  //     .limit(limit);
-  // },
   getById(id) {
     return knex.select().from(CATEGORY_TABLE).where({ id }).first();
   },
