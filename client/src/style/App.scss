@@ -511,17 +511,17 @@ $primary-color: #0d6efd;
     .search-close {
       font-size: 2rem;
       position: absolute;
-      top: 40%;
+      top: 70%;
       left: 95%;
-      transform: translate(-95%, -40%);
+      transform: translate(-95%, -70%);
       cursor: pointer;
       color: $dark-gray;
       &:hover {
         color: lighten($dark-gray, 20%);
       }
-      @include respond-tablet {
+      @include respond-phone {
         font-size: 2rem;
-        top: 70%;
+        top: 60%;
         left: 95%;
         transform: translate(-95%, -70%);
       }
