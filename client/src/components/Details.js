@@ -1,11 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import moment from "moment";
 
 function Details({ categoryDetails, actionDetails, setDetailsIsShown }) {
+  const [formattedHours, setFormattedHours] = useState("");
+  const [formattedMinutes, setFormattedMinutes] = useState("");
+  const [formattedSeconds, setFormattedSeconds] = useState("");
+
   const handleClose = () => {
     setDetailsIsShown(false);
   };
-  useEffect(() => {}, [categoryDetails]);
+  const formatTime = () => {
+    let totalDuration = actionDetails.totalTime;
+    const hours = Math.floor(actionDetails.totalTime / 3600);
+    setFormattedHours(hours < 10 ? `0${hours}` : `${hours}`);
+    totalDuration -= hours * 3600;
+    const minutes = Math.floor(totalDuration / 60);
+    setFormattedMinutes(minutes < 10 ? `0${minutes}` : `${minutes}`);
+    totalDuration -= minutes * 60;
+    const seconds = totalDuration;
+    setFormattedSeconds(seconds < 10 ? `0${seconds}` : `${seconds}`);
+  };
+
+  useEffect(() => {
+    formatTime();
+  }, [categoryDetails]);
+
   return (
     <div className="section">
       <div className="details">
@@ -24,9 +43,7 @@ function Details({ categoryDetails, actionDetails, setDetailsIsShown }) {
               <tr>
                 <td>Total time spent:</td>
                 <td>
-                  {moment
-                    .utc(actionDetails.totalTime * 1000)
-                    .format("HH:mm:ss")}
+                  {`${formattedHours}:${formattedMinutes}:${formattedSeconds}`}
                 </td>
               </tr>
               <tr>
