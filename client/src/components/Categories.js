@@ -45,6 +45,7 @@ function Categories({
   const handleSearch = async (e) => {
     const searchQuery = e.target.value;
     setSearchQuery(searchQuery);
+    setPage(1);
   };
 
   const handleCategoryDelete = (id) => {
