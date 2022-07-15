@@ -84,7 +84,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Node.js / Express\
 PostgreSQL\
-Knex.js
+Knex.js\
+Passport.js
 
 ## Front-end
 
