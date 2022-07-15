@@ -28,7 +28,7 @@ Deployed app is avaialble at: [https://timetracker-ys.herokuapp.com/](https://ti
 - CRUD features for categories and duration
 - Timer feature
 - Search by catetgory title
-- Sort by category title, total time, updated time, ec.
+- Sort by category title, total time, updated time, etc.
 - Visualisation of statistics with a bar chart and pie chart
 - Pagination
 - Toggle feature for base calculation period
