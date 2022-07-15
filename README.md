@@ -1,21 +1,41 @@
 # Time Tracker
 
 Welcome to Time Tracker!
-![time_tracker_img](https://user-images.githubusercontent.com/72680138/169623079-d7cef01d-06a5-40e7-9002-286e00f15ecc.jpg)
+![time_tracker_img](https://user-images.githubusercontent.com/72680138/179129719-3f709c9c-54da-49c3-8470-5ae348de4d86.png)
 
-## Introduction
+![timer_tracker_img2](https://user-images.githubusercontent.com/72680138/179129978-b96f32ec-4054-43e1-8d79-21c93d3da4c1.png)
+
+<img src="https://user-images.githubusercontent.com/72680138/179130230-0317829b-e2f6-4f6a-8de7-4f582da752cc.png" width="200">
+
+# Introduction
 
 This application was created during my time as a student at [Code Chrysalis](https://www.codechrysalis.io/ "Code Chrysalis Website").
 
-Time Tracker is a single page timer / time-tracking application. It allows users to keep track of their time based on the categories they created. It also offers visualization with charts for users to easily see their progress.
+Time Tracker is a timer / time-tracking application that allows users to keep track of their time based on the categories they created. It also offers visualization with charts for users to easily see their progress.
 
-## Using the Application
+## Demo Video
+
+Demo video is available on [YouTube](https://www.youtube.com/watch?v=72FbO49y2eQ)
+
+## Deployed Application
+
+Deployed app is avaialble at: [https://timetracker-ys.herokuapp.com/](https://timetracker-ys.herokuapp.com/)
+
+## Features
+
+- User registration
+- User sign-in / sign-out
+- CRUD features for categories and duration
+- Timer feature
+- Search by catetgory title
+- Sort by category title, total time, updated time, ec.
+- Visualisation of statistics with a bar chart and pie chart
+- Pagination
+- Toggle feature for base calculation period
+
+# Run it in the development mode
 
 To use the application locally, please follow the steps below.
-
-Please visit the deployed app at: [https://timetracker-ys.herokuapp.com/](https://timetracker-ys.herokuapp.com/)
-
-### Run it in the development mode
 
 **1: Create .env file and database**
 
@@ -58,14 +78,18 @@ To start front-end, you can go into "client" directory by running `cd client` an
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Tech Stack
+# Tech Stack
 
-### Back-end:
+## Back-end:
 
 Node.js / Express\
 PostgreSQL\
 Knex.js
 
-### Front-end
+## Front-end
 
-React
+React\
+Apex Chart\
+Moment.js\
+React Bootstrap\
+Sass
