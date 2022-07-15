@@ -20,7 +20,7 @@ function MobileMenu() {
                 <a href="#categories">Categories</a>
               </li>
               <li className="nav__link nav__link--about">
-                <a href="#latest">Latest Activities</a>
+                <a href="#latests">Latest Activities</a>
               </li>
               <li className="nav__link nav__link--contact">
                 <a href="#daily">Daily Progress</a>

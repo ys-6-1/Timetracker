@@ -29,7 +29,7 @@ Deployed app is avaialble at: [https://timetracker-ys.herokuapp.com/](https://ti
 - Timer feature
 - Search by catetgory title
 - Sort by category title, total time, updated time, etc.
-- Visualisation of statistics with a bar chart and pie chart
+- Visualisation of statistics with charts and a summary table
 - Pagination
 - Toggle feature for base calculation period
 

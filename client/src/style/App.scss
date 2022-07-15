@@ -810,7 +810,6 @@ $primary-color: #0d6efd;
 }
 
 .nav__checkbox:checked ~ .nav__background {
-  // left: 20%;
   left: 0%;
 }
 
@@ -819,7 +818,7 @@ $primary-color: #0d6efd;
   top: 0;
   left: -150%;
   height: 100%;
-  width: 20vw;
+  width: 40vw;
   z-index: 2;
   background-color: #faf9f9;
   transition: all 0.3s;
@@ -847,9 +846,7 @@ $primary-color: #0d6efd;
 }
 
 .mobile-header__content li {
-  // margin: 3rem;
   margin: 1rem;
-  // background-color: #008ffb;
   width: 10rem;
 }
 

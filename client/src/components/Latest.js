@@ -87,7 +87,7 @@ function Latest({
 
   return (
     <div className="section">
-      <span id="latest"></span>
+      <span id="latests"></span>
       <h5>Latest activities</h5>
       <div className="overflow-container">
         <table className="table table__latest">
