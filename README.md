@@ -49,7 +49,8 @@ To run this application locally, you need to fork this repository and create the
 ```
 DB_USER=your user name
 DB_PASSWORD=your password
-DB_NAME=time_tracker
+DB_NAME=timetracker
+SESSION_SECRET=your secret key
 ```
 
 **3: Install dependencies**
